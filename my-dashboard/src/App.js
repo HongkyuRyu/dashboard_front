@@ -2,8 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import KPIList from "./components/KPIList";
 
-const HomePage = () => <div className="p-6">홈페이지 - 전체 현황</div>;
+const HomePage = () => <div className="p-6">
+    <KPIList/>
+</div>;
 const LeaderboardPage = () => <div className="p-6">리더보드 페이지</div>;
 const MessagePage = () => <div className="p-6">메시지 페이지</div>;
 const SettingsPage = () => <div className="p-6">설정 페이지</div>;
