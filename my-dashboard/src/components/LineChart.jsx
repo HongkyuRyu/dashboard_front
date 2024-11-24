@@ -148,8 +148,12 @@ const LineChart = () => {
   };
 
   return (
-    <div className="w-full h-[400px] md:w-[800px] md:h-[400px] mx-auto">
+    <div>
+        <h2 className="text-lg font-bold text-gray-700 mb-4">업체별 매출 추이</h2>
+    <div className="bg-white shadow-md rounded-md p-4"
+     style={{ height: "400px", width: "100%" }}>
       <Line data={data} options={options} />
+    </div>
     </div>
   );
 };

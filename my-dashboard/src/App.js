@@ -4,13 +4,38 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import KPIList from "./components/KPIList";
 import LineChart from "./components/LineChart";
-
+import TopSellingItems from "./components/TopSesslingItems";
+import BarChart from "./components/BarChart";
+import TopLevelDonutCharts from "./components/TopLevelDonutCharts";
+import NewCustomers from "./components/NewCustomer";
+import RealtimeWorkStatus from "./components/RealtimeWorkStatus";
 const HomePage = () => (
   <div className="p-6">
     <KPIList />
-    <div className="mt-10">
-      <h1 className="text-2xl font-bold mb-4">업체별 예상 매출 추이</h1>
+    <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
       <LineChart />
+      </div>
+      <TopSellingItems/>
+    </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+        <BarChart />
+      </div>
+      <div>
+        <TopLevelDonutCharts/>
+      </div>
+    </div>
+    <div className="p-6 space-y-6">
+    {/* 다른 섹션들 */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <NewCustomers />
+      <RealtimeWorkStatus />
+    </div>
+  </div>
+    
+    <div>
+      
     </div>
   </div>
 );
